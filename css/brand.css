@@ -15,7 +15,7 @@
 .vison-title::after {
   content: "";
   width: 24.6rem;
-  height: 15rem;
+  height: 17.8rem;
   position: absolute;
   background: url(../img/decoration-pic1.svg) no-repeat;
   top: 50%;
@@ -31,14 +31,11 @@
   transform: translateY(-50%) scaleX(-1);
 }
 
-.vison-title p:nth-child(1) {
-  color: var(--main-color);
-}
-
 .vison-title h4 {
-  font-size: 8.2rem;
+  font-size: clamp(4.5rem, 6vw, 8.2rem);
   font-weight: 600;
   color: var(--main-color);
+  word-break: keep-all;
 }
 
 .vison-title p {
@@ -48,18 +45,22 @@
 }
 
 .vip .sec-title {
-  margin-top: 25.8rem;
+  margin-top: 13.4375vw;
 }
 
 .vip-service {
   margin-top: 12rem;
+  padding: 3rem;
   display: flex;
   justify-content: center;
-  gap: 4.5rem;
+  gap: 3rem;
+  flex-shrink: 0;
+  overflow-x: auto;
 }
 
 .vip-service li {
   width: 41rem;
+  min-width: 33.5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   padding: 0 5.4rem;
@@ -72,7 +73,7 @@
   position: relative;
   cursor: pointer;
   word-break: keep-all;
-  box-shadow: 0px 0px 30px rgba(14, 33, 47, 0.55);
+  box-shadow: 0px 0px 30px rgba(245, 120, 32, 0.55);
 }
 
 .vip-service li:nth-child(1) {
@@ -103,17 +104,13 @@
 .vip-service dl {
   position: relative;
   z-index: 1;
-  opacity: 0;
-}
-.vip-service li:hover dl {
-  opacity: 1;
 }
 
 .vip-service dt {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 2vw, 3rem);
   font-weight: 700;
   color: var(--white100);
-  transform: translateY(130%);
+  transform: translateY(50%);
   transition: 0.5s;
 }
 
@@ -122,10 +119,10 @@
 }
 
 .vip-service dd {
-  transform: translateY(350%);
+  margin-top: 2.3rem;
+  transform: translateY(500%);
   color: var(--white70);
   transition: 0.5s;
-  margin-top: 2rem;
 }
 
 .vip-service li:hover dd {
@@ -133,7 +130,8 @@
 }
 
 .ideology .sec-title {
-  margin-top: 17.8rem;
+  /* margin-top: 17.8rem; */
+  margin-top: 9.2708vw;
 }
 
 .slider {
@@ -142,16 +140,19 @@
   width: 100%;
   height: 73.3rem;
   overflow: hidden;
-  left: 50%;
-  transform: translateX(-40%);
+  /* padding: 0 21rem; */
+  padding: 0 10.9375vw;
 }
 
 .foreground {
-  width: 73rem;
-  height: 74.7rem;
+  /* width: 73rem; */
+  width: 38.0208vw;
+  min-width: 55rem;
+  /* height: 74.7rem; */
+  height: 38.9063vw;
   position: absolute;
   top: 45%;
-  left: 40%;
+  left: 50%;
   transform: translateX(-50%);
   bottom: 48.3rem;
   z-index: 1;
@@ -161,6 +162,7 @@
 }
 
 .wrap {
+  top: 45%;
   width: 149.7rem;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -168,6 +170,8 @@
   /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
   background: url(https://cliocosmetic.com/ko/img/sub/people_bg.jpg) no-repeat
     50% / cover;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .ideology-slider {
@@ -180,14 +184,14 @@
 }
 
 .ideology-txt dt {
-  font-size: 4rem;
+  font-size: clamp(2.4rem, 3.5vw, 4rem);
   font-weight: 700;
   color: var(--main-color);
 }
 
 .ideology-txt dd {
   margin-top: 0.6rem;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   font-weight: 500;
   word-break: keep-all;
 }
@@ -196,12 +200,14 @@
   margin-top: 3.5rem;
 }
 
+.story .inner {
+  overflow: hidden;
+}
+
 .story {
-  /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
   background: url(../img/brand-story-pic.jpg) no-repeat 50% / cover;
   padding: 21.2rem 0 20rem 0;
   position: relative;
-  /* transform: translateY(-50%); */
   z-index: 1;
 }
 
@@ -232,7 +238,7 @@
 
 .story p {
   width: 50%;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2vw, 2rem);
   color: var(--white70);
   word-break: keep-all;
   margin-top: 2.8rem;
@@ -242,10 +248,13 @@
 
 .story div + p {
   margin-top: 8rem;
+  font-size: clamp(2rem, 2.2vw, 2.2rem);
+  font-weight: 600;
+  color: var(--white100);
 }
 
 .story p:last-child {
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 2.2vw, 2.2rem);
   font-weight: 600;
   color: var(--white100);
 }
@@ -258,10 +267,84 @@
 .thanks h4 {
   color: var(--title-color);
   font: 5.2rem/1.5 "Pretendard", sans-serif;
+  font-size: clamp(4rem, 6vw, 5.2rem);
   padding: 16rem 0;
   text-align: center;
 }
+
 .thanks strong {
   color: var(--main-color);
   font: "Poppins", sans-serif;
+}
+
+@media (max-width: 1800px) {
+  .vison-title::before,
+  .vison-title::after {
+    width: 18rem;
+    height: 13rem;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1500px) {
+  .ideology-slider {
+    top: 35%;
+  }
+
+  .foreground {
+    width: 55rem;
+    height: 56rem;
+  }
+
+  .slider {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 1350px) {
+  .vison-title::before,
+  .vison-title::after {
+    display: none;
+  }
+
+  .vip-service {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1000px) {
+  .vison-title::before,
+  .vison-title::after {
+    display: none;
+  }
+
+  .slider {
+    height: 65vh;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .vison-title p {
+    width: 80%;
+  }
+
+  .slider {
+    height: 55vh;
+  }
+
+  .foreground {
+    width: 50%;
+    min-width: 42rem;
+    height: 46rem;
+    top: 35%;
+  }
+
+  .story .sec-title h3 {
+    width: 100%;
+  }
+
+  .story p {
+    width: 90%;
+  }
 }

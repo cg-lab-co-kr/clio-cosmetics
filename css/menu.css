@@ -224,6 +224,10 @@
   .tip-list li p {
     margin-top: 2%;
   }
+
+  .tip-txt p {
+    width: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -238,5 +242,9 @@
 
   .tip-list li:hover p {
     top: 8vw;
+  }
+
+  .tip-txt p {
+    width: 100%;
   }
 }
