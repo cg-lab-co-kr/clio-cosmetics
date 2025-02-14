@@ -302,11 +302,6 @@
 }
 
 @media (max-width: 1350px) {
-  .vison-title::before,
-  .vison-title::after {
-    display: none;
-  }
-
   .vip-service {
     justify-content: flex-start;
   }
